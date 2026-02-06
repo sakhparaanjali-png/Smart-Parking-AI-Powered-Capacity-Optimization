@@ -63,10 +63,11 @@ Parking facility managers face a critical challenge: balancing supply and demand
 - **Results:** Consistent ~40,000 vehicles/week predicted
 
 ### 4. **Prescriptive Analytics**
-- **Objective:** Minimize total cost (overflow + vacancy)
+- **Objective:** Minimize |Avg Overflow - Avg Vacancy|
 - **Optimization Approach:** Scenario simulation (0-40 vehicle capacity)
-- **Cost Function:** Minimize |Avg Overflow - Avg Vacancy|
-- **Optimal Solution:** **21 vehicles** (difference = 0.444)
+- **Decision Metric:** Absolute difference between overflow and vacancy
+- **Optimal Solution:** **21 vehicles** (gap = 0.444)
+- **Interpretation:** Best balance point where excess demand ≈ unused capacity
 
 ## 📈 Key Visualizations
 
@@ -154,8 +155,7 @@ print(f"Recommended Capacity: {optimal_capacity} vehicles")
 | **Optimal Capacity** | 21 vehicles |
 | **Average Overflow** | 2.858 vehicles |
 | **Average Vacancy** | 3.302 vehicles |
-| **Cost Balance** | 0.444 difference |
-| **Forecast Accuracy** | Weekly predictions with <10% variance |
+| **Optimization Gap** | 0.444 (Overflow - Vacancy) |
 
 ## 💡 Business Impact
 
@@ -230,9 +230,10 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 ## 👤 Author
 
-**ANjali Sakhpara**
+**Anjali Sakhpara**
 - Ex-Gartner | Ex-Accenture | Master's Candidate at Texas State University
-- Specialization: Gen AI, Machine Learning, Statistical Analysis
+- Specialization: Machine Learning, Statistical Analysis
+
 ---
 
 **Note:** This project demonstrates end-to-end analytics workflow from raw data collection through actionable business recommendations. It showcases proficiency in time series analysis, forecasting, optimization, and data-driven decision making.
